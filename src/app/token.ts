@@ -1,0 +1,1 @@
+export const token: string = "FGJZTT0-J0K49NN-Q2RPKZ0-9SCNVMM"

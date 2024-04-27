@@ -1,0 +1,138 @@
+:root {
+    --blue: #2e90d1;
+    --purple: #78258d;
+    --text: #585858;
+    --title: #232323;
+    --purple---active: #641f76;
+    --purple---border: #bb92c6;
+    --purple---focus: #d2b6d9;
+    --purple---hover: #8e49a0;
+    --purple---main: #78258d;
+    --purple---secondry: #efefff;
+    --red---active: #be1c1f;
+    --red---border: #f19092;
+    --red---focus: #f6b5b6;
+    --red---hover: #e84649;
+    --red---header: #b24c4c;
+    --red---main: #e42125;
+    --red---secondry: #ffefef;
+    --blue---active: #2678ae;
+    --blue---border: #96c7e8;
+    --blue---focus: #b9daf0;
+    --blue---hover: #51a2d9;
+    --blue---main: #2e90d1;
+    --blue---button-hover: #0d4cd3;
+    --blue---secondary: #def1ff;
+    --grey-active: #bdbdbd;
+    --grey-border: #f1f1f1;
+    --grey-focus: #f6f6f6;
+    --grey-hover: #e8e8e8;
+    --grey-main: #e3e3e3;
+    --grey-secondary: #f9f9f9;
+    --orange-active: #c55616;
+    --orange-border: #f5b38c;
+    --orange-focus: #f9ccb3;
+    --orange-hover: #ef8040;
+    --orange-main: #ec671a;
+    --orange-secondary: #fbe1d1;
+    --yellow-active: #d4ac00;
+    --yellow-border: #fee680;
+    --yellow-focus: #ffefaa;
+    --yellow-hover: #fed62b;
+    --yellow-main: #fece00;
+    --yellow-secondary: #fff5cc;
+    --green-active: #1cbe2b;
+    --green-border: #90f199;
+    --green-focus: #b5f6bb;
+    --green-hover: #46e856;
+    --green-main: #21e434;
+    --green-secondary: #d3fad6;
+    --dark-green-active: #238e2e;
+    --dark-green-border: #94d49b;
+    --dark-green-focus: #b8e3bc;
+    --dark-green-hover: #4eb858;
+    --dark-green-main: #2aaa37;
+    --dark-green-secondary: #d4eed7;
+    --white: #ffffff;
+    --black: #000000;
+    --header-link: #333;
+    --font-family: "Gilroy-Regular", sans-serif;
+    --ff-gilroy-black: "Gilroy-Black", sans-serif;
+    --ff-gilroy-heavy: "Gilroy-Heavy", sans-serif;
+    --ff-gilroy-bold: "Gilroy-Bold", sans-serif;
+    --second-family: "Lato", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+}
+
+button[disabled]{
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+
+}
+
+body {
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    font-family: var(--font-family);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input {outline:none;}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    font-size: inherit;
+}
+
+ul[class],
+ul{
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

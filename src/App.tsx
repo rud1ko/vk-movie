@@ -1,12 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Film from "./pages/Film";
+import FilmDetail from "./pages/FilmDetail";
 
 function App() {
   return (
-    <div className="App">
-      vk-movie
-    </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path={"/films"} element={<Home/>}/>
+              <Route path={"/films/:id"} element={<FilmDetail/>}/>
+          </Routes>
+      </BrowserRouter>
   );
 }
 
