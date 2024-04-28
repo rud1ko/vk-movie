@@ -2,9 +2,38 @@
     font-weight: 700;
     font-size: 40px;
     text-align: center;
+    color: var(--white);
+    margin-bottom: 40px;
 }
 
-.container{
+.wrapper{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    counter-reset: pagination-num
+}
+
+.page:before{
+    counter-increment: pagination-num;
+    content: counter( pagination-num );
+    font-size: 20px;
+}
+
+.page:not(.is-active){
+    background-color: var(--white);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.home{
+    min-height: 100vh;
+    background-color: var(--black);
 }

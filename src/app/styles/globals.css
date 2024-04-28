@@ -136,3 +136,7 @@ textarea,
 select {
     font: inherit;
 }
+
+button.is-active{
+    background-color: var(--red---header) !important;
+}

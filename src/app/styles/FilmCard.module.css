@@ -1,9 +1,18 @@
 .container{
-    display: flex;
-    flex-direction: column;
+    color: var(--white);
 }
 
 .img{
     width: 400px;
     height: auto;
+}
+
+.rating{
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.infoFilm{
+    display: flex;
+    gap: 20px;
 }
