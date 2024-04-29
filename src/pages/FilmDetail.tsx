@@ -69,7 +69,7 @@ const FilmDetail = (): JSX.Element => {
             setDate(dateArray.reverse().join(' '))
         }
 
-    }, [])
+    }, [data])
 
 
     return (
@@ -104,7 +104,7 @@ const FilmDetail = (): JSX.Element => {
                                     </h1>
                                     <Splide hasTrack={false} options={{
                                         rewind: true,
-                                        perPage: 2,
+                                        perPage: data.similarMovies.length > 2 ? 2 : 1,
                                         perMove: 1,
                                         pagination: true,
                                         classes: {
