@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Header from "../widgets/Header/Header";
 import styles from '../../src/app/styles/Home.module.css'
-import {data} from "../app/services/service";
+import {data as localData} from "../app/services/service";
 import {store} from "../app/redux/store";
 import FilmCard from "../widgets/FilmCard/FilmCard";
 import {Splide, SplideProps, SplideSlide, SplideTrack} from "@splidejs/react-splide";
@@ -9,8 +9,13 @@ import '@splidejs/react-splide/css'
 import '@splidejs/splide/dist/css/splide.min.css'
 import cn from 'classnames'
 import {withMainLayout} from "../app/providers/layout/MainLayout";
+import {useGetTopFilmsQuery} from "../app/redux/api/MovieAPI";
 
 const Home = () => {
+    const {data, isLoading, isError} = useGetTopFilmsQuery()
+
+    if (isLoading) return <div>isLoading</div>
+    else if (isError) return <div>isError</div>
 
     return (
         <div className={styles.container}>
@@ -31,14 +36,14 @@ const Home = () => {
                 pagination: true,
                 paginationDirection: "ltr",
                 focus: 0,
+                type: 'loop'
             }}>
                 <SplideTrack>
-                    {data.map((el) => {
+                    {data?.docs.map((el, idx) => {
                         return (
-                            <SplideSlide className={styles.wrapper}>
+                            <SplideSlide key={idx} className={styles.wrapper}>
                                 <FilmCard
                                     id={el.id}
-                                    key={el.id}
                                     name={el.name}
                                     poster={el.poster.previewUrl}
                                     rating={el.rating.kp}

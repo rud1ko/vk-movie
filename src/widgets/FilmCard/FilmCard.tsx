@@ -76,7 +76,7 @@ const FilmCard = ({id, name, poster, rating, realise}: FilmCardProps) => {
                 </Link>
             </div>
             <div className={styles.infoFilm}>
-                <span className={styles.rating}>{rating.toFixed(1)}</span>
+                <span className={styles.rating}>{rating?.toFixed(2)}</span>
                 <div className={styles.shortDesc}>
                     <h2>{name}</h2>
                     <p>{date}</p>

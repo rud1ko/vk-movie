@@ -1,6 +1,6 @@
 .container{
     color: var(--white);
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .title{
@@ -9,26 +9,33 @@
 
 .content{
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(400px, 900px) auto;
+    justify-content: space-between;
     grid-column-gap: 50px;
 }
 
 .img{
-    height: calc(100vh - 136px);
+    height: calc(100vh - 116px);
     width: auto;
 }
 
 .sliderContainer{
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .titleSlider{
     font-size: 25px;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .wrapper{
     display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination{
+    display: flex;
+    gap: 30px;
     justify-content: center;
 }
